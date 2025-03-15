@@ -23,7 +23,7 @@ const MPESA_CONSUMER_KEY = process.env.MPESA_CONSUMER_KEY;
 const MPESA_CONSUMER_SECRET = process.env.MPESA_CONSUMER_SECRET;
 const MPESA_SHORTCODE = "174379"; // Replace with Paybill or Till number
 const MPESA_PASSKEY = process.env.MPESA_PASSKEY;
-const CALLBACK_URL = "https://94be-41-89-96-143.ngrok-free.app/mpesaCallback"; // Replace with actual callback URL
+const CALLBACK_URL = "https://server-iz6n.onrender.com/mpesaCallback"; // Replace with actual callback URL
 
 // Function to get M-Pesa access token
 async function getMpesaToken() {

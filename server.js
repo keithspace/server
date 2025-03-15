@@ -5,11 +5,13 @@ const admin = require("firebase-admin");
 const dotenv = require("dotenv");
 const axios = require("axios");
 const base64 = require("base-64");
+const serviceAccount = JSON.parse(process.env.FIREBASE_CONFIG);
 
 dotenv.config();
 
 admin.initializeApp({
-    credential: admin.credential.cert(require("./firebase-admin.json")),
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: "https://firestore.googleapis.com/v1/projects/chekr1/databases/(default)"
 });
 
 const db = admin.firestore();
